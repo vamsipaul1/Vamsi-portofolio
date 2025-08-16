@@ -7,6 +7,20 @@ const config: Config = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  safelist: [
+    'w-1/2',
+    'w-full',
+    'w-1/3',
+    'w-2/3',
+    'w-1/4',
+    'w-3/4',
+    'w-1/5',
+    'w-4/5',
+    'w-1/6',
+    'w-5/6',
+    'w-auto',
+    // Add more if you use other dynamic widths
+  ],
   theme: {
     extend: {
       fontFamily: {
