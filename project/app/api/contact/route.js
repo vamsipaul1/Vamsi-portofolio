@@ -10,15 +10,15 @@ export default async function handler(req, res) {
     const transporter = nodemailer.createTransport({
       service: 'gmail', // or your email provider
       auth: {
-        user: process.env.EMAIL_USER, // your email address
-        pass: process.env.EMAIL_PASS, // your email password or app password
+        user: 'vamsirangumudri2023@gmail.com', // your email address
+        pass: 'nbto kbwc ivec oalo', // your email password or app password
       },
     });
 
     try {
       await transporter.sendMail({
         from: `"${name}" <${email}>`,
-        to: process.env.EMAIL_USER, // your email address
+        to: 'vamsirangumudri2023@gmail.com', // your email address
         subject: `Portfolio Contact: ${subject}`,
         text: message,
         html: `<p><strong>Name:</strong> ${name}</p>
