@@ -2,35 +2,38 @@
 // or app/api/contact/route.js (for Next.js 13+ with app directory)
 import nodemailer from 'nodemailer';
 
-export default async function handler(req, res) {
-  if (req.method === 'POST') {
-    const { name, email, subject, message } = req.body;
+export async function POST(req) {
+  try {
+    const body = await req.json();
+    const { name, email, subject, message } = body;
 
-    // Configure your email transport
     const transporter = nodemailer.createTransport({
-      service: 'gmail', // or your email provider
+      service: 'gmail',
       auth: {
-        user: 'vamsirangumudri2023@gmail.com', // your email address
-        pass: 'nbto kbwc ivec oalo', // your email password or app password
+        user: 'vamsirangumudri2023@gmail.com',
+        pass: 'nbto kbwc ivec oalo',
       },
     });
 
-    try {
-      await transporter.sendMail({
-        from: `"${name}" <${email}>`,
-        to: 'vamsirangumudri2023@gmail.com', // your email address
-        subject: `Portfolio Contact: ${subject}`,
-        text: message,
-        html: `<p><strong>Name:</strong> ${name}</p>
-               <p><strong>Email:</strong> ${email}</p>
-               <p><strong>Subject:</strong> ${subject}</p>
-               <p><strong>Message:</strong><br/>${message}</p>`,
-      });
-      res.status(200).json({ message: 'Message sent successfully!' });
-    } catch (error) {
-      res.status(500).json({ message: 'Error sending message.', error });
-    }
-  } else {
-    res.status(405).json({ message: 'Method not allowed' });
+    await transporter.sendMail({
+      from: `"${name}" <${email}>`,
+      to: 'vamsirangumudri2023@gmail.com',
+      subject: `Portfolio Contact: ${subject}`,
+      text: message,
+      html: `<p><strong>Name:</strong> ${name}</p>
+             <p><strong>Email:</strong> ${email}</p>
+             <p><strong>Subject:</strong> ${subject}</p>
+             <p><strong>Message:</strong><br/>${message}</p>`,
+    });
+
+    return new Response(
+      JSON.stringify({ success: true, message: 'Message sent successfully!' }),
+      { status: 200, headers: { 'Content-Type': 'application/json' } }
+    );
+  } catch (error) {
+    return new Response(
+      JSON.stringify({ success: false, message: 'Error sending message.', error: error.message }),
+      { status: 500, headers: { 'Content-Type': 'application/json' } }
+    );
   }
 }
