@@ -68,7 +68,7 @@ const AboutSection = () => {
             className="flex justify-center lg:justify-start"
           >
             {/* Profile Image */}
-            <div className="relative w-[22rem] h-[22rem] mx-auto">
+            <div className="relative w-40 h-40 sm:w-56 sm:h-56 md:w-72 md:h-72 lg:w-[22rem] lg:h-[22rem] mx-auto">
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 800 }}
@@ -91,7 +91,7 @@ const AboutSection = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="space-y-4 md:space-y-6 pr-8 md:pr-16 lg:pr-24"
+            className="space-y-4 md:space-y-6 pr-4 md:pr-16 lg:pr-24"
           >
             {/* Bio */}
             <div className="space-y-4 md:space-y-6">

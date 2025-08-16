@@ -28,6 +28,10 @@ const config: Config = {
     'w-24',
     'w-32',
     'w-[22rem]', 'h-[22rem]',
+    'w-40', 'h-40',
+    'sm:w-56', 'sm:h-56',
+    'md:w-72', 'md:h-72',
+    'lg:w-[22rem]', 'lg:h-[22rem]',
     // Add more if you use other dynamic widths
   ],
   theme: {
