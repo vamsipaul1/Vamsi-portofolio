@@ -91,7 +91,7 @@ const AboutSection = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="space-y-4 md:space-y-6"
+            className="space-y-4 md:space-y-6 pr-8 md:pr-16 lg:pr-24"
           >
             {/* Bio */}
             <div className="space-y-4 md:space-y-6">
