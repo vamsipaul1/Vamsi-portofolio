@@ -39,12 +39,12 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="py-16 md:py-20 bg-gradient-to-br from-white via-gray-50 to-red-50 relative overflow-hidden">
+    <section id="about" className="py-12 bg-gradient-to-br from-white via-gray-50 to-red-50 relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute top-20 left-10 w-24 h-24 md:w-32 md:h-32 bg-gradient-to-r from-red-200/20 to-orange-200/20 rounded-full blur-xl" />
       <div className="absolute bottom-20 right-10 w-28 h-28 md:w-40 md:h-40 bg-gradient-to-r from-red-200/20 to-pink-200/20 rounded-full blur-xl" />
       
-      <div className="container mx-auto px-4 md:px-6" ref={ref}>
+      <div className="container px-0 mx-0" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -59,7 +59,7 @@ const AboutSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-2 lg:gap-4 items-center">
+        <div className="grid lg:grid-cols-2 gap-0 items-center px-0 mx-0">
           {/* Profile Image and Info */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -68,22 +68,22 @@ const AboutSection = () => {
             className="flex justify-center lg:justify-start"
           >
             {/* Profile Image */}
-<div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
-  <motion.div
-    whileHover={{ scale: 1.05 }}
-    transition={{ type: "spring", stiffness: 300 }}
-    className="w-full h-full rounded-3xl bg-gradient-to-br from-red-500 to-red-700 p-2"
-  >
-    <div className="w-full h-full rounded-2xl bg-gray-200 overflow-hidden">
-      {/* Real Profile Image */}
-      <img 
-        src="/My profile photo -portofolio.jpg"   // <-- replace with your image path (e.g. /images/me.png)
-        alt="My Profile" 
-        className="w-full h-full object-cover"
-      />
-    </div>
-  </motion.div>
-</div>
+            <div className="relative w-[22rem] h-[22rem] mx-auto">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 800 }}
+                className="w-full h-full rounded-3xl bg-gradient-to-br from-red-500 to-red-700 p-2"
+              >
+                <div className="w-full h-full rounded-2xl bg-gray-200 overflow-hidden">
+                  {/* Real Profile Image */}
+                  <img 
+                    src="/My profile photo -portofolio.jpg"
+                    alt="My Profile"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </motion.div>
+            </div>
 </motion.div>
 
           {/* Content */}

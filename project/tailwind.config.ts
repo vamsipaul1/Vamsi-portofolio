@@ -21,15 +21,13 @@ const config: Config = {
     'w-auto',
     'w-3/4',
     'w-5/12',
-    'w-7/12',
+      'w-7/12',
     'w-12',
     'w-16',
     'w-20',
     'w-24',
     'w-32',
-    'w-64', 'h-64',
-    'md:w-80', 'md:h-80',
-    'lg:w-96', 'lg:h-96',
+    'w-[22rem]', 'h-[22rem]',
     // Add more if you use other dynamic widths
   ],
   theme: {
