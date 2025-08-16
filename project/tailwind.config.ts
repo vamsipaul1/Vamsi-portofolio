@@ -19,6 +19,17 @@ const config: Config = {
     'w-1/6',
     'w-5/6',
     'w-auto',
+    'w-3/4',
+    'w-5/12',
+    'w-7/12',
+    'w-12',
+    'w-16',
+    'w-20',
+    'w-24',
+    'w-32',
+    'w-64', 'h-64',
+    'md:w-80', 'md:h-80',
+    'lg:w-96', 'lg:h-96',
     // Add more if you use other dynamic widths
   ],
   theme: {

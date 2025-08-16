@@ -59,7 +59,7 @@ const AboutSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-2 lg:gap-4 items-center">
           {/* Profile Image and Info */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
