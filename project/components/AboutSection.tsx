@@ -39,12 +39,12 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="py-12 bg-gradient-to-br from-white via-gray-50 to-red-50 relative overflow-hidden">
+    <section id="about" className="min-h-screen flex items-center justify-center py-12 bg-gradient-to-br from-white via-gray-50 to-red-50 relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute top-20 left-10 w-24 h-24 md:w-32 md:h-32 bg-gradient-to-r from-red-200/20 to-orange-200/20 rounded-full blur-xl" />
       <div className="absolute bottom-20 right-10 w-28 h-28 md:w-40 md:h-40 bg-gradient-to-r from-red-200/20 to-pink-200/20 rounded-full blur-xl" />
       
-      <div className="container px-0 mx-0" ref={ref}>
+      <div className="container flex flex-col justify-center items-center px-0 mx-auto" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -59,13 +59,13 @@ const AboutSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-0 items-center px-0 mx-0">
+        <div className="grid lg:grid-cols-2 gap-0 items-center justify-center px-0 mx-0">
           {/* Profile Image and Info */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex justify-center lg:justify-start"
+            className="flex justify-center lg:justify-center"
           >
             {/* Profile Image */}
             <div className="relative w-40 h-40 sm:w-56 sm:h-56 md:w-72 md:h-72 lg:w-[22rem] lg:h-[22rem] mx-auto">
@@ -84,14 +84,14 @@ const AboutSection = () => {
                 </div>
               </motion.div>
             </div>
-</motion.div>
+          </motion.div>
 
           {/* Content */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="space-y-4 md:space-y-6 pr-4 md:pr-16 lg:pr-24"
+            className="space-y-4 md:space-y-6 pr-0 md:pr-8 lg:pr-12 text-center lg:text-left flex flex-col items-center lg:items-start"
           >
             {/* Bio */}
             <div className="space-y-4 md:space-y-6">
