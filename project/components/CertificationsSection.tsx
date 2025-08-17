@@ -41,7 +41,7 @@ const CertificationsSection = () => {
       date: 'July 2024',
       credentialId: '',
       description: 'Comprehensive certification covering React, React Native, and modern frontend development.',
-      logo: '',
+      logo: '📊',
       color: 'from-blue-400 to-cyan-400',
       skills: ['Microsoft Power BI', 'Data Visualization', 'Data Analysis', 'Dahboard Design'],
       verifyUrl: 'https://media.licdn.com/dms/document/media/v2/D562DAQGXsAfWiOnLvA/profile-treasury-document-pdf-analyzed/B56Ze7kffkHoAc-/0/1751198597339?e=1756339200&v=beta&t=cj0mTTpDJqolNv60rnI9TV3R8ARSXyfkh4_khAOqGmk'
@@ -77,7 +77,7 @@ const CertificationsSection = () => {
       date: '',
       credentialId: 'gROb7za4MV',
       description: 'Professional-level knowledge of python containerization and orchestration.',
-      logo: '🐳',
+      logo: '🐍',
       color: 'from-blue-500 to-blue-700',
       skills: ['Python'],
       verifyUrl: 'https://media.licdn.com/dms/document/media/v2/D562DAQGd_3zLxRtA5A/profile-treasury-document-pdf-analyzed/B56Ze7ffpxHEAg-/0/1751197290916?e=1756339200&v=beta&t=wRdR-arYrbIZQvADSKSyIuDDM_vVoG8mXWZ8eZnRmH0'
